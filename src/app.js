@@ -25,9 +25,6 @@ app.post("/files", upload.single("attachment"), (req, res) => {
 app.use("/articles", articleRouter);
 app.use("/comments", commentRouter);
 app.use("/products", productRouter);
-app.use("/", (req, res, next) => {
-  next(new Error("Testting"));
-});
 
 app.use(errorHandler);
 
